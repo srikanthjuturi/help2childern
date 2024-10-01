@@ -2,8 +2,11 @@
     font-family: montserrat, sans-serif;
     -webkit-font-smoothing: antialiased;
     font-style: normal;
+    
 }
-
+.typing-text{
+    color: rgba(255, 255, 255, 0.815);
+}
 .mr {
     gap: 10px;
     align-items: right;
@@ -86,6 +89,10 @@
     font-size: 23px;
     cursor: pointer;
 }
+.get2 {
+    color: gray;
+    line-height: 1.7;
+}
 
 .get1:hover {
     font-weight: bold;
@@ -94,10 +101,7 @@
     color: orange;
 }
 
-.get2 {
-    color: gray;
-    line-height: 1.7;
-}
+ 
 
 .first-div-sec-col {
     text-align: end;
@@ -131,8 +135,45 @@
     width: 90vw;
     height: auto;
     margin-left: 100px;
-
 }
+
+.second-part {
+    position: relative;
+}
+
+#animated-button {
+    position: absolute;
+    font-size: 130px;
+    top: 30%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    color: orange;
+    border-radius: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    animation: pulse 1.5s infinite; /* Start the pulse animation by default */
+}
+
+#animated-button i {
+    animation: pulse 1.5s infinite; /* Optional, add pulse to the icon separately */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 
 .hhh {
     font-size: 50px;
@@ -140,11 +181,15 @@
     padding: 30px 0px 0px 20px;
     font-weight: bold;
 }
-
+#latest-cuase-div{
+    overflow: hidden;
+    text-align: center;
+}
 .counter-inner {
     display: flex;
     justify-content: space-around;
-    width: 95vw;
+    width:87vw;
+    overflow: hidden;
 }
 
 .counter-color {
@@ -249,6 +294,10 @@
 #contact-image {
     width: 80%;
     height: 300px;
+}
+#contact-image +h1 {
+    font-size: 50px;
+    padding-right: 30px;
 }
 
 .form-inputs {
@@ -440,14 +489,53 @@
 transform: scale(1.05);
 transition: all 2s ease;
 }
+
+/* _________button animation____________
+ */
 @media screen and (max-width:480px) {
+    .Gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 40px);
+        width: 100%;
+        row-gap: 5px;
+        column-gap: 15px;
+    }
+    
+    .Gallery-img {
+        width: 40px;
+        height: 50px;
+    }
+    #we-do {
+        font-size: 25px;
+        font-variant: small-caps;
+        font-weight: bold;
+    }
+    .merge {
+        background-color: black;
+        width: fit-content;
+        height: fit-content;
+        margin-top: 0px;
+    }
+    
+    
+    .second-part img {
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+    }
+    .counter-text {
+        color: red;
+        word-break: break-all;
+        font-size: 5px;
+    }
+    
     #serve-better {
-        font-size: 40px;
+        font-size: 20px;
         font-weight: bold
     }
 
     .home-content h1 {
-        font-size: 35px;
+        font-size: 25px;
         font-weight: bold;
         font-family: "Open Sans", sans-serif;
         font-variant: small-caps;
@@ -460,7 +548,7 @@ transition: all 2s ease;
     .our-garllery-text {
         padding: 0px;
         font-weight: bold;
-        font-size: 30px;
+        font-size: 10px;
     }
 
     .latest-cuase {
@@ -476,7 +564,7 @@ transition: all 2s ease;
     }
 
     .second-part img {
-        width: 90vw;
+        width: 60vw;
         height: auto;
         margin-left: 30px;
 
@@ -492,6 +580,146 @@ transition: all 2s ease;
         font-size: 40px;
         padding: 0px;
         font-weight: bold;
+    }
+   
+    #contact-image {
+        width: 100%;
+        height: 300px;
+    }
+    #contact-image +h1 {
+        font-size: 25px;
+        width: 100%;
+    padding-right: 0px;
+
+    }
+
+    .clients {
+        width: 150px;
+        height: 50px;
+    }
+
+    .clients-div {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        row-gap: 20px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .Gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 40px);
+        width: 100%;
+        row-gap: 5px;
+        column-gap: 15px;
+    }
+    
+    .Gallery-img {
+        width: 50px;
+        height: 50px;
+    }
+    .first-nav-div-1{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #we-do {
+        font-size: 30px;
+        font-variant: small-caps;
+        font-weight: bold;
+    }
+    .get {
+        width: 100%;
+        height: 250px;
+    }
+
+    
+.home-content {
+    transform: translate(0%, 70%);
+}
+    .merge {
+        background-color: black;
+        width: fit-content;
+        height: fit-content;
+        margin-top: 0px;
+    }
+    
+    
+    .second-part img {
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+    }
+    .counter-text {
+        color: red;
+        word-break: break-all;
+        font-size: 5px;
+        /* overflow: hidden; */
+    }
+    
+    #serve-better {
+        font-size: 20px;
+        font-weight: bold
+    }
+
+    .home-content h1 {
+        font-size: 25px;
+        font-weight: bold;
+        font-family: "Open Sans", sans-serif;
+        font-variant: small-caps;
+    }
+
+    .first-div-sec-col {
+        text-align: center;
+    }
+
+    .our-garllery-text {
+        padding: 0px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .latest-cuase {
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    .card-content {
+        word-break: break-all;
+        hyphens: auto;
+        line-height: 2;
+
+    }
+
+    .second-part img {
+        width: 60vw;
+        height: auto;
+        margin-left: 30px;
+
+    }
+
+    .counter-text {
+        color: gray;
+        word-break: break-all;
+        font-size: 16px;
+    }
+
+    .news {
+        font-size: 40px;
+        padding: 0px;
+        font-weight: bold;
+    }
+   
+    #contact-image {
+        width: 100%;
+        height: 300px;
+    }
+    #contact-image +h1 {
+        font-size: 25px;
+        width: 100%;
+    padding-right: 0px;
+
     }
 
     .clients {
